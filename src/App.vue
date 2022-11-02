@@ -2,48 +2,81 @@
   <v-app>
     <v-card>
       <v-layout>
+        <!-- add permanent to have it always be shown -->
         <v-navigation-drawer expand-on-hover rail>
           <v-list>
-            <v-list-item prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg" title="The Batman"
-              subtitle="Bruce-NotWayne@gmail.com"></v-list-item>
+            <v-list-item prepend-avatar="https://randomuser.me/api/portraits/men/22.jpg" title="Admin"
+              subtitle="admin@admin.com"></v-list-item>
           </v-list>
 
           <v-divider></v-divider>
 
           <v-list density="compact" nav>
             <router-link to="/">
-              <v-list-item prepend-icon="mdi-pencil-outline" title="Home" value="myfiles"></v-list-item>
+              <v-list-item prepend-icon="mdi-pencil-outline" title="discussion forum" value="myfiles"></v-list-item>
             </router-link>
             <router-link to="/about">
-
+              <v-list-item prepend-icon="mdi-account-multiple" title="make new post" value="shared"></v-list-item>
             </router-link>
-            <v-list-item prepend-icon="mdi-account-multiple" title="Shingle Posts" value="shared"></v-list-item>
 
+            <router-link to="/editpostsview">
+              <v-list-item prepend-icon="mdi-star" title="Edit posts" value="starred"></v-list-item>
+            </router-link>
 
-            <v-list-item prepend-icon="mdi-star" title="Starred" value="starred"></v-list-item>
+            <router-link to="/login">
+              <v-list-item prepend-icon="mdi-login" title="Login" value="login"></v-list-item>
+            </router-link>
+
+            <router-link to="/navguardviewtest">
+              <v-list-item prepend-icon="mdi-login" title="navguardviewtest" value="login"></v-list-item>
+            </router-link>
+
+            <span v-if="isLoggedin">
+              <v-btn @click="logOut()">
+                Logout
+              </v-btn>
+
+            </span>
           </v-list>
         </v-navigation-drawer>
 
-        <v-main>
+        <v-main class="ma-2">
           <Suspense>
             <router-view></router-view>
           </Suspense>
-
         </v-main>
-
-        <v-main style="height: 250px"></v-main>
       </v-layout>
     </v-card>
   </v-app>
 </template>
 
-<script>
+<script setup>
+import { ref, onMounted } from 'vue'
+import { getAuth, onAuthStateChanged } from 'firebase/auth'
 
-export default {
-  name: 'App',
+import useUsers from '@/modules/useUsers'
 
-  data: () => ({
-    //
-  }),
-}
+const { logOut } = useUsers()
+
+let auth
+const isLoggedin = ref(false)
+
+onMounted(() => {
+  auth = getAuth();
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      isLoggedin.value = true
+    }
+    else {
+      isLoggedin.value = false
+    }
+  })
+})
 </script>
+
+
+<style lang="scss">
+.v-main {
+  min-height: 100vh;
+}
+</style>
