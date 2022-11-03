@@ -50,9 +50,6 @@ onMounted(() => {
   getPostsData()
 })
 //const user = localStorage.getItem('userLoginInfoFireBase')
-<<<<<<< HEAD
-
-</script>
 
 </script>
 
@@ -67,9 +64,3 @@ onMounted(() => {
   background: linear-gradient(90deg, rgba(214, 146, 146, 1) 22%, rgba(232, 229, 167, 1) 76%);
 }
 </style>
-
-}
-</style>
-=======
-</script>
->>>>>>> parent of 07b75e8 (made small changes, namely adding link between new post and archive, adding icons, modifiyng css)
