@@ -1,17 +1,17 @@
 <template>
   <div>
-    <h1>
-      Introduce yourself to our growing community!
+    <h1 class="postarchive">
+      post archive
     </h1>
 
-    <v-card class="ma-5 pa-4" v-for="post in posts" :key="post">
+    <v-card class="post ma-5 pa-4" v-for="post in posts" :key="post">
 
       <p v-html="post.description"></p>
 
-      <p>PostID: {{ post.id }}</p>
-
     </v-card>
   </div>
+  <v-btn color="green" a href="../about">looking to make a post?<span class="label label-danger"></span></v-btn>
+
 </template>
 
 <script setup>
@@ -40,9 +40,17 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
-h1 {
+.postarchive {
   color: white;
   text-shadow: 5px 5px 10px #000000;
+  text-align: center;
+  -webkit-text-stroke: 1px #282828;
+}
+
+.postarchive {
+  background: rgb(214, 146, 146);
+  background: linear-gradient(90deg, rgba(214, 146, 146, 1) 22%, rgba(232, 229, 167, 1) 76%);
+  color: white;
   text-align: center;
 }
 </style>
