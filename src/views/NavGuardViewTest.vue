@@ -3,13 +3,8 @@
         <!--only show if user is logged in-->
 
 
-        <h1>Hello {{ user.email }}</h1>
-        <h1>Hello splitted name {{ userNameOnly }}</h1>
         <h1 class="welcomeback">Welcome back {{ userNameOnly }}</h1>
         <h1 class="welcomeback">{{ user.email }}</h1>
-
-        <h1>Welcome back {{ userNameOnly }}</h1>
-        <h1>{{ user.email }}</h1>
 
     </div>
     <div v-else>
