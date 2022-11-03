@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>
-      Front page stuff
+      Introduce yourself to our growing community!
     </h1>
 
     <v-card class="ma-5 pa-4" v-for="post in posts" :key="post">
@@ -30,11 +30,19 @@ onMounted(() => {
 // const querySnapshot = await getDocs(collection(db, "posts"));
 // querySnapshot.forEach((doc) => {
 //   // doc.data() is never undefined for query doc snapshots
-//     posts.value.push({ 
-//     ...doc.data(), 
-//     id: doc.id 
+//     posts.value.push({
+//     ...doc.data(),
+//     id: doc.id
 //   })
 //   //debugger
 //   console.log(doc.id, " => ", doc.data());
 // });
 </script>
+
+<style lang="scss">
+h1 {
+  color: white;
+  text-shadow: 5px 5px 10px #000000;
+  text-align: center;
+}
+</style>

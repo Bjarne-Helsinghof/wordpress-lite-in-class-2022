@@ -13,14 +13,14 @@
 
           <v-list density="compact" nav>
             <router-link to="/">
-              <v-list-item prepend-icon="mdi-pencil-outline" title="discussion forum" value="myfiles"></v-list-item>
+              <v-list-item prepend-icon="mdi-post" title="discussion forum" value="myfiles"></v-list-item>
             </router-link>
             <router-link to="/about">
-              <v-list-item prepend-icon="mdi-account-multiple" title="make new post" value="shared"></v-list-item>
+              <v-list-item prepend-icon="mdi-plus-box" title="make new post" value="shared"></v-list-item>
             </router-link>
 
             <router-link to="/editpostsview">
-              <v-list-item prepend-icon="mdi-star" title="Edit posts" value="starred"></v-list-item>
+              <v-list-item prepend-icon="mdi-pencil-outline" title="Edit posts" value="starred"></v-list-item>
             </router-link>
 
             <router-link to="/login">
@@ -28,11 +28,11 @@
             </router-link>
 
             <router-link to="/navguardviewtest">
-              <v-list-item prepend-icon="mdi-login" title="navguardviewtest" value="login"></v-list-item>
+              <v-list-item prepend-icon="mdi-lock" title="navguardviewtest" value="login"></v-list-item>
             </router-link>
 
             <span v-if="isLoggedin">
-              <v-btn @click="logOut()">
+              <v-btn color="error" @click="logOut()">
                 Logout
               </v-btn>
 
@@ -78,5 +78,13 @@ onMounted(() => {
 <style lang="scss">
 .v-main {
   min-height: 100vh;
+}
+
+.v-layout {
+  background-color: lavenderblush;
+}
+
+.v-navigation-drawer__content {
+  background-color: bisque;
 }
 </style>

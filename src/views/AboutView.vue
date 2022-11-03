@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+    <h2 class="newpostintro">allow us to rip off Facebook: "what is on your mind"</h2>
     <v-btn class="bg-green-lighten-3" @click="isOpen = true">Add New Post</v-btn>
     <teleport to="body">
       <div class="modal" v-if="isOpen">
@@ -47,5 +48,11 @@ const isOpen = ref(false)
   top: 96px;
   left: -5px;
   z-index: 99;
+}
+
+.newpostintro {
+  color: white;
+  text-shadow: 5px 5px 10px #000000;
+  text-align: center;
 }
 </style>

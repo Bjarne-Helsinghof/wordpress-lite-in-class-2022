@@ -1,9 +1,9 @@
 <template>
     <div v-if="isLoggedin">
-        only show if user is logged in
+        <!--only show if user is logged in-->
 
-        <h1>Hello {{ user.email }}</h1>
-        <h1>Hello splitted name {{ userNameOnly }}</h1>
+        <h1>Welcome back {{ userNameOnly }}</h1>
+        <h1>Email used to login: {{ user.email }}</h1>
     </div>
     <div v-else>
         Not logged in
