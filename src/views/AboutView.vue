@@ -1,7 +1,6 @@
 <template>
   <div class="about">
     <h2 class="newpostintro">allow us to rip off Facebook: "what is on your mind"</h2>
-    <br>
     <v-btn class="bg-green-lighten-3" @click="isOpen = true">Add New Post</v-btn>
     <teleport to="body">
       <div class="modal" v-if="isOpen">

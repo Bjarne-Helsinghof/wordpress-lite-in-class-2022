@@ -32,7 +32,8 @@
             </router-link>
 
             <span v-if="isLoggedin">
-              <v-btn prepend-icon="mdi-logout" color="error" @click="logOut()">
+              <v-btn color="error" @click="logOut()">
+                Logout
               </v-btn>
 
             </span>

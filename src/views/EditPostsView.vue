@@ -1,6 +1,6 @@
 <template>
   <div v-if="isLoggedin">
-    <h1 class="editwelcome">
+    <h1>
       Edit your post <br> Hello {{ user.email }}
     </h1>
 
@@ -13,7 +13,7 @@
     </v-card> -->
 
     <v-card class="bg-amber-lighten-4 text-grey-darken-4 ma-5 pa-4" v-for="post in posts" :key="post">
-      <!--<h5>Post: {{ post.id }}</h5>-->
+      <h5>Post: {{ post.id }}</h5>
 
       <QuillEditor toolbar="full" theme="snow" v-model:content="post.description" contentType="html" />
 
@@ -50,6 +50,7 @@ onMounted(() => {
   getPostsData()
 })
 //const user = localStorage.getItem('userLoginInfoFireBase')
+<<<<<<< HEAD
 
 </script>
 
@@ -69,3 +70,6 @@ onMounted(() => {
 
 }
 </style>
+=======
+</script>
+>>>>>>> parent of 07b75e8 (made small changes, namely adding link between new post and archive, adding icons, modifiyng css)
