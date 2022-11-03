@@ -3,7 +3,7 @@
     <v-card>
       <v-layout>
         <!-- add permanent to have it always be shown -->
-        <v-navigation-drawer expand-on-hover rail>
+        <v-navigation-drawer permanent expand-on-hover rail>
           <v-list>
             <v-list-item prepend-avatar="https://randomuser.me/api/portraits/men/22.jpg" title="Admin"
               subtitle="admin@admin.com"></v-list-item>
