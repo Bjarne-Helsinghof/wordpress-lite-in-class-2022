@@ -1,5 +1,7 @@
 <template>
   <div class="about">
+    <h2 class="newpostintro">allow us to rip off Facebook: "what is on your mind"</h2>
+    <br>
     <v-btn class="bg-green-lighten-3" @click="isOpen = true">Add New Post</v-btn>
     <teleport to="body">
       <div class="modal" v-if="isOpen">
@@ -48,8 +50,7 @@ const isOpen = ref(false)
   left: -5px;
   z-index: 99;
 }
-<<<<<<< Updated upstream
-=======
+
 
 .newpostintro {
   color: white;
@@ -59,5 +60,5 @@ const isOpen = ref(false)
   background: linear-gradient(90deg, rgba(214, 146, 146, 1) 22%, rgba(232, 229, 167, 1) 76%);
   padding: 1em;
 }
->>>>>>> Stashed changes
+
 </style>

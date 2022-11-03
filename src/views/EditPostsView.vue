@@ -1,6 +1,6 @@
 <template>
   <div v-if="isLoggedin">
-    <h1>
+    <h1 class="editwelcome">
       Edit your post <br> Hello {{ user.email }}
     </h1>
 
@@ -13,7 +13,7 @@
     </v-card> -->
 
     <v-card class="bg-amber-lighten-4 text-grey-darken-4 ma-5 pa-4" v-for="post in posts" :key="post">
-      <h5>Post: {{ post.id }}</h5>
+      <!--<h5>Post: {{ post.id }}</h5>-->
 
       <QuillEditor toolbar="full" theme="snow" v-model:content="post.description" contentType="html" />
 
@@ -50,9 +50,9 @@ onMounted(() => {
   getPostsData()
 })
 //const user = localStorage.getItem('userLoginInfoFireBase')
-<<<<<<< Updated upstream
+
 </script>
-=======
+
 </script>
 
 <style lang="scss">
@@ -61,8 +61,11 @@ onMounted(() => {
   text-shadow: 5px 5px 10px #000000;
   text-align: center;
   -webkit-text-stroke: 1px #282828;
+
   background: rgb(214, 146, 146);
   background: linear-gradient(90deg, rgba(214, 146, 146, 1) 22%, rgba(232, 229, 167, 1) 76%);
 }
 </style>
->>>>>>> Stashed changes
+
+}
+</style>
