@@ -2,8 +2,15 @@
     <div v-if="isLoggedin">
         <!--only show if user is logged in-->
 
+
+        <h1>Hello {{ user.email }}</h1>
+        <h1>Hello splitted name {{ userNameOnly }}</h1>
+        <h1 class="welcomeback">Welcome back {{ userNameOnly }}</h1>
+        <h1 class="welcomeback">{{ user.email }}</h1>
+
         <h1>Welcome back {{ userNameOnly }}</h1>
         <h1>{{ user.email }}</h1>
+
     </div>
     <div v-else>
         Not logged in
@@ -24,5 +31,10 @@ const userNameOnly = computed(() => {
 </script>
   
 <style lang="scss" scoped>
-
+.welcomeback {
+    color: white;
+    text-align: center;
+    background: rgb(214, 146, 146);
+    background: linear-gradient(90deg, rgba(214, 146, 146, 1) 22%, rgba(232, 229, 167, 1) 76%);
+}
 </style>
