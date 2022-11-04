@@ -12,6 +12,9 @@
           <v-divider></v-divider>
 
           <v-list density="compact" nav>
+            <router-link to="/navguardviewtest">
+              <v-list-item prepend-icon="mdi-lock" title="navguard" value="login"></v-list-item>
+            </router-link>
             <router-link to="/">
               <v-list-item prepend-icon="mdi-post" title="discussion forum" value="myfiles"></v-list-item>
             </router-link>
@@ -27,9 +30,7 @@
               <v-list-item prepend-icon="mdi-login" title="Login" value="login"></v-list-item>
             </router-link>
 
-            <router-link to="/navguardviewtest">
-              <v-list-item prepend-icon="mdi-lock" title="navguardviewtest" value="login"></v-list-item>
-            </router-link>
+
 
             <span v-if="isLoggedin">
               <v-btn block prepend-icon="mdi-logout" color="error" @click="logOut()">

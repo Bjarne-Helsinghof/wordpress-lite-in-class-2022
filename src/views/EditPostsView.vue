@@ -1,7 +1,7 @@
 <template>
   <div v-if="isLoggedin">
     <h1 class="editwelcome">
-      Edit your post <br> Hello {{ user.email }}
+      Edit your notes <br> Hello {{ user.email }}
     </h1>
 
     <!-- <v-card class="bg-teal-lighten-5 pa-5 text-grey-darken-4">
