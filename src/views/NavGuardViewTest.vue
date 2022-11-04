@@ -7,8 +7,8 @@
         <h1 class="welcomeback">{{ user.email }}</h1>
 
     </div>
-    <div v-else>
-        Not logged in
+    <div v-else class="notloggedin">
+        please log in to see this section
     </div>
 </template>
   
@@ -30,6 +30,14 @@ const userNameOnly = computed(() => {
     color: white;
     text-align: center;
     background: rgb(214, 146, 146);
+    background: linear-gradient(90deg, rgba(214, 146, 146, 1) 22%, rgba(232, 229, 167, 1) 76%);
+}
+
+.notloggedin {
+    color: white;
+    text-align: center;
+    background: rgb(214, 146, 146);
+    font-size: 2em;
     background: linear-gradient(90deg, rgba(214, 146, 146, 1) 22%, rgba(232, 229, 167, 1) 76%);
 }
 </style>

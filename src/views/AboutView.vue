@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h2 class="newpostintro">allow us to rip off Facebook: "what is on your mind"</h2>
+    <h2 class="newpostintro">allow us to rip off Facebook: "what is on your mind"</h2> <br>
     <v-btn class="bg-green-lighten-3" @click="isOpen = true">Add New Post</v-btn>
     <teleport to="body">
       <div class="modal" v-if="isOpen">
@@ -10,6 +10,8 @@
       </div>
     </teleport>
   </div>
+  <br>
+  <v-btn color="blue" a href="../">looking to make a post?<span class="label label-danger"></span></v-btn>
 </template>
 
 <script setup>
@@ -59,5 +61,4 @@ const isOpen = ref(false)
   background: linear-gradient(90deg, rgba(214, 146, 146, 1) 22%, rgba(232, 229, 167, 1) 76%);
   padding: 1em;
 }
-
 </style>

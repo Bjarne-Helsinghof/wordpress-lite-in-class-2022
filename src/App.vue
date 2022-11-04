@@ -32,8 +32,7 @@
             </router-link>
 
             <span v-if="isLoggedin">
-              <v-btn color="error" @click="logOut()">
-                Logout
+              <v-btn block prepend-icon="mdi-logout" color="error" @click="logOut()">
               </v-btn>
 
             </span>
@@ -81,7 +80,7 @@ onMounted(() => {
 }
 
 .v-layout {
-  background-color: lavenderblush;
+  background-color: lavender;
 }
 
 .v-navigation-drawer__content {
