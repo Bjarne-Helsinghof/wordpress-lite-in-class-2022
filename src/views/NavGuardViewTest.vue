@@ -6,7 +6,9 @@
         <h1 class="welcomeback">Welcome back {{ userNameOnly }}</h1>
         <h1 class="welcomeback">{{ user.email }}</h1>
 
-        would you like to:
+        <br>
+        <p class="wylt">would you like to:</p>
+        <br>
         <v-btn color="green" a href="../">write note<span class="label label-danger"></span></v-btn>
         <v-btn color="green" a href="../about">make a new note<span class="label label-danger"></span></v-btn>
         <v-btn color="green" a href="../editpostsview">edit your notes<span class="label label-danger"></span></v-btn>
@@ -34,7 +36,10 @@ const userNameOnly = computed(() => {
 <style lang="scss" scoped>
 .welcomeback {
     color: white;
+    text-shadow: 5px 5px 10px #000000;
     text-align: center;
+    -webkit-text-stroke: 1px #282828;
+
     background: rgb(214, 146, 146);
     background: linear-gradient(90deg, rgba(214, 146, 146, 1) 22%, rgba(232, 229, 167, 1) 76%);
 }
@@ -49,5 +54,13 @@ const userNameOnly = computed(() => {
 
 .v-btn {
     margin-right: 5px;
+}
+
+.wylt {
+    color: #555555;
+    font-weight: bold;
+    font-family: roboto;
+    font-size: 1.5em;
+
 }
 </style>

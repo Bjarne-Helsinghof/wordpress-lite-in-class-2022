@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="introtext">
-      Introduce yourself to our growing community!
+      here is what you have written down for this week?
     </h1>
 
     <v-card class=" ma-5 pa-4" v-for="post in posts" :key="post">
